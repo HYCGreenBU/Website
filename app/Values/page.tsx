@@ -1,0 +1,31 @@
+'use client'
+// import image1 from "../media/Images/image (1).png";
+// import image2 from "../media/Images/image (2).png";
+// import image3 from "../media/Images/image (3).png";
+// import image4 from "../media/Images/image (4).png";
+
+// import Image from 'next/image'
+// import React, { useEffect, useRef, useState } from 'react'
+
+
+import Carousel from '../components/Carousel/carousel'
+const image = "../../media/Images/image.png";
+const image1 = "../../media/Images/image (1).png";
+const image2 = "../../media/Images/image (2).png";
+const image3 = "../../media/Images/image (3).png";
+const image4 = "../../media/Images/image (4).png";
+
+const DATA = [
+  { image: image },
+  { image: image1 },
+  { image: image2 },
+  { image: image3 },  
+  { image: image4 },
+]
+export default function Home() {
+  return (
+    <main className="flex w-full min-h-screen flex-col items-center justify-center text-center">
+      <Carousel data={DATA} />
+    </main>
+  )
+}
