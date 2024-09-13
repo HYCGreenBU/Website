@@ -61,7 +61,7 @@ const Theros = () => {
               height={400}
               className="w-full h-auto object-cover"
             />
-            <p className="text-lg">Employs a single belt design to eliminate product transfer issues, reducing complications. It also requires fewer motors compared to its predecessor, resulting in enhanced energy efficiency. Additionally, we've enhanced the take-up design to decrease the frequency of belt cutting, reducing maintenance work.</p>
+            <p className="text-lg">Employs a single belt design to eliminate product transfer issues, reducing complications. It also requires fewer motors compared to its predecessor, resulting in enhanced energy efficiency. Additionally, we&apos;ve enhanced the take-up design to decrease the frequency of belt cutting, reducing maintenance work.</p>
           </div>
         </div>
       </section>
