@@ -13,14 +13,14 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full h-20 bg-cyan-700 sticky top-0">
+      <div className="w-full h-20 bg-cyan-700 sticky top-0 object-cover z-50">
         <div className="container mx-auto px-4 h-full">
           <div className="flex justify-between items-center h-full">
             <Logo />
             <div className="relative">
               <ul className="hidden md:flex gap-x-6 text-white">
                 <li className="relative">
-                  <button
+                  <button 
                     className="focus:outline-none"
                     onClick={() => toggleDropdown('About')}
                   >
