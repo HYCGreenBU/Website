@@ -7,6 +7,7 @@
 // import Image from 'next/image'
 // import React, { useEffect, useRef, useState } from 'react'
 
+import Head from 'next/head';
 import Carousel from '../components/Carousel/carousel'
 const image = "/media/Images/pic1.jpg";
 const image1 = "/media/Images/pic2.jpg";
@@ -26,9 +27,15 @@ const DATA = [
 
 export default function Home() {
   return (
+    <>
+    <Head>
+      <title>HYC Values</title> {/* This sets the browser tab title */}
+      <meta name="description" content="A beautiful carousel showcasing images" />
+    </Head>
+
     <main className="flex w-full min-h-screen flex-col items-center justify-center text-center">
       <Carousel data={DATA} />
     </main>
-
+    </>
   )
 }
