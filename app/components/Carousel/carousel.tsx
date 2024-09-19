@@ -1,66 +1,64 @@
-'use client'
-import Image from 'next/image'
-import React, { useEffect, useRef, useState } from 'react'
+'use client';
 
-const Carousel = ({
-  data,
-}: {
-  data: {
-    image: string
-  }[]
-}) => {
-  const [currentImg, setCurrentImg] = useState(0)
-  const [carouselSize, setCarouselSize] = useState({ width: 0, height: 0 })
-  const carouselRef = useRef(null)
+import Image from 'next/image';
+import React, { useRef, useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
-  useEffect(() => {
-    const handleResize = () => {
-      const elem = carouselRef.current as unknown as HTMLDivElement
-      if (elem) {
-        const { width, height } = elem.getBoundingClientRect()
-        setCarouselSize({ width, height })
-      }
-    }
+const Carousel = ({ data }: { data: { image: string }[] }) => {
+  const [currentImg, setCurrentImg] = useState(0);
+  // const [carouselSize, setCarouselSize] = useState({ width: 0, height: 0 });
+  const carouselRef = useRef<HTMLDivElement | null>(null);
 
-    handleResize()
-    window.addEventListener('resize', handleResize)
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (carouselRef.current) {
+  //       const { width, height } = carouselRef.current.getBoundingClientRect();
+  //       // setCarouselSize({ width, height });
+  //     }
+  //   };
 
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
+  //   handleResize();
+  //   window.addEventListener('resize', handleResize);
+
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (currentImg < data.length - 1) setCurrentImg(currentImg + 1);
+    },
+    onSwipedRight: () => {
+      if (currentImg > 0) setCurrentImg(currentImg - 1);
+    },
+    trackMouse: true,
+  });
 
   return (
-    <div style={{ width: '100vw', height: '80vh' }}>
-      {/* Carousel container */}
-      <div style={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden' }}>
-        {/* Image container */}
-        <div
-          ref={carouselRef}
-          style={{
-            display: 'flex',
-            height: '100%',
-            width: '100%',
-            transition: 'transform 0.3s ease',
-            transform: `translateX(-${currentImg * carouselSize.width}px)`,
-          }}
-        >
-          {/* Map through data to render images */}
-          {data.map((v, i) => (
-            <div key={i} style={{ position: 'relative', height: '100%', width: '100%', flexShrink: 0 }}>
-              <Image
-                alt={`carousel-image-${i}`}
-                fill
-                style={{ objectFit: 'contain' }}
-                src={v.image || 'https://random.imagecdn.app/500/500'}
-                // src={v || 'https://random.imagecdn.app/500/500'}
-              />
-            </div>
-          ))}
-        </div>
+    <div {...handlers} style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+      <div
+        ref={carouselRef}
+        style={{
+          display: 'flex',
+          width: `${data.length * 100}vw`,
+          height: '100%',
+          transition: 'transform 0.3s ease',
+          transform: `translateX(-${currentImg * 100}vw)`,
+        }}
+      >
+        {data.map((v, i) => (
+          <div key={i} style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+            <Image
+              alt={`carousel-image-${i}`}
+              fill
+              style={{ objectFit: 'cover' }} // Adjusted for full coverage
+              src={v.image || 'https://random.imagecdn.app/500/500'}
+            />
+          </div>
+        ))}
       </div>
 
-      {/* Navigation buttons */}
       <div style={{
         position: 'absolute',
         bottom: '20px',
@@ -68,7 +66,8 @@ const Carousel = ({
         transform: 'translateX(-50%)',
         display: 'flex',
         justifyContent: 'center',
-        gap: '1rem'
+        gap: '1rem',
+        zIndex: 10 // Ensure buttons are on top of the carousel
       }}>
         <button
           disabled={currentImg === 0}
@@ -96,7 +95,7 @@ const Carousel = ({
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;
