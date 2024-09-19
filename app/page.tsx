@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/navigation/navbar";
 
-import placeholderimage from "../public/media/Images/placeholderimage.jpg";
+// import placeholderimage from "../public/media/Images/placeholderimage.jpg";
 import therosimage from "../public/webpage/TherosWebsiteModel.webp";
 import coolingimage from "../public/webpage/NotusCooling.webp";
 import stackingimage from "../public/webpage/NotusStacking.webp";
