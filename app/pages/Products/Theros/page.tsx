@@ -18,7 +18,7 @@ const Theros = () => {
           alt="Descriptive Alt Text"
           layout="fill" // Use fill to cover the section
           objectFit="cover" // Ensures the image covers the section
-          className="absolute inset-0"
+          className="absolute inset-0 object-cover fill"
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-white bg-opacity-100 border border-gray-300 py-16 px-36">
@@ -30,8 +30,8 @@ const Theros = () => {
       </section>
       
       {/* Video Section */}
-      <section className="mb-8" >
-        <iframe className="w-full aspect-[16/9]" src="https://www.youtube.com/embed/u31qwQUeGuM?si=0s0X583WBdYv47D1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      <section className="mb-8 flex justify-center" >
+        <iframe className="w-3/4 aspect-[16/9]" src="https://www.youtube.com/embed/u31qwQUeGuM?si=0s0X583WBdYv47D1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </section>
       
       {/* Text Section */}
@@ -51,7 +51,7 @@ const Theros = () => {
               alt="Image 1"
               width={600}
               height={400}
-              className="w-full h-1/2 object-cover"
+              className="w-full h-1/2 object-fill"
             />
             <p className="py-4 text-3xl text-center font-semibold"> IR Heater Box </p>
             <p className="text-2xl py-6 text-justify px-4">Our system features modular heater boxes for easy replacements, efficient IR heating, precise temperature control, and the capability to reach higher temperatures than conventional ovens, all while remaining energy efficient.</p>
@@ -62,7 +62,7 @@ const Theros = () => {
               alt="Image 2"
               width={600}
               height={400}
-              className="w-full h-1/2 object-cover"
+              className="w-full h-1/2 object-contain"
             />
             <p className="py-4 text-3xl text-center font-semibold"> Scalability </p>
             <p className="text-2xl py-6 text-justify px-4">Designed with scalability in mind, it allows varying numbers of zones (7, 9, 11). This flexibility more configuration of curing times to suit diverse curing time requirements, providing a highly adaptable solution for your specific needs.</p>
@@ -73,7 +73,7 @@ const Theros = () => {
               alt="Image 3"
               width={600}
               height={400}
-              className="w-full h-1/2 object-cover"
+              className="w-full h-1/2 object-contain"
             />
             <p className="py-4 text-3xl text-center font-semibold"> Single Belt System </p>
             <p className="text-2xl py-6 text-justify px-4">Employs a single belt design to eliminate product transfer issues, reducing complications. It also requires fewer motors compared to its predecessor, resulting in enhanced energy efficiency. Additionally, we&apos;ve enhanced the take-up design to decrease the frequency of belt cutting, reducing maintenance work.</p>
@@ -89,6 +89,7 @@ const Theros = () => {
               className="w-3/4 h-auto object-cover"
             />
       </section>
+
       {/* Theros Image Section */}
       <section>
         <Image           
@@ -98,6 +99,8 @@ const Theros = () => {
             />
       </section>
 
+
+      {/* Feautres Section */}
       <section>
         <p className="text-7xl text-center font-semibold underline mb-10 mt-20"> Features </p>
       </section>

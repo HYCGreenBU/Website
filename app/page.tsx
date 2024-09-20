@@ -15,20 +15,27 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8">
       {/* What we do Section */}
         <section className="py-16"> 
-          <p className="text-7xl text-center "> What We Do </p>
-          <p className="text-3xl text-center py-4"> We are dedicated to delivering tailor-made technology solutions that precisely align with your unique business needs. Our commitment begins with a thorough consultation and needs assessment to understand your challenges, objectives, and operational requirements.</p>
+          <p className="text-6xl text-center "> What We Do </p>
+          <p className="text-2xl text-center py-4"> We are dedicated to delivering tailor-made technology solutions that precisely align with your unique business needs. Our commitment begins with a thorough consultation and needs assessment to understand your challenges, objectives, and operational requirements.</p>
         </section>
 
 
       {/* Product Gallery  */}
         {/* Theros */}
+        <section className="">
+          <div>
+            <p className="text-7xl text-center py-2"> Our Products </p>
+          </div>      
+          <div className="flex justify-center">
+            <Image 
+            src={therosimage} // Replace with your image path
+            alt="Descriptive Alt Text"
+            className="w-auto h-auto object-cover py-2 flex justify-center"
+            />
+          </div>    
+        </section>
+        
         <section>
-          <p className="text-7xl text-center py-2"> Our Products </p>
-          <Image 
-          src={therosimage} // Replace with your image path
-          alt="Descriptive Alt Text"
-          className="w-auto h-auto object-cover py-2"
-          />
           <p className="text-3xl text-center font-sans font-semibold font-style: normal font-weight: 400 "> THEROS </p>
           <p className="text-2xl text-center py-4"> Scalable IR oven that is customizable to 3,4 or 5 tiers </p>
           <div className="flex justify-center">
