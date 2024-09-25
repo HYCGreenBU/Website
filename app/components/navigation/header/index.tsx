@@ -4,11 +4,10 @@ import logo from "../../../../public/media/Images/logoCropped.svg"
 import Image from "next/image";
 
 
-const Logo = () => {
+const Header = () => {
     return(
-        <div>
-            <ul className="hidden md:flex gap-x-6 px-4 mr-10 text-black font-montserrat font-extrabold text-2xl text-center">
-                <li>
+        <div className="h-30 py-4">
+            <div className="flex justify-start px-4">
                 <Link href="/">
                     <Image
                         src = {logo}
@@ -16,10 +15,9 @@ const Logo = () => {
                         className="h-8 w-auto"
                     />
                 </Link>
-                </li>
-            </ul>
+            </div>
         </div>
     );
 };
 
-export default Logo;
+export default Header;

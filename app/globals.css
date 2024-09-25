@@ -25,3 +25,11 @@ body {
     text-wrap: balance;
   }
 } */
+
+.header {
+  @apply text-2xl md:text-4xl lg:text-6xl text-center font-montserrat mb-20 font-medium;
+}
+
+.subheader {
+  @apply text-xl md:text-2xl lg:text-4xl text-center font-montserrat mb-20 font-medium;
+}

@@ -12,7 +12,7 @@ const Theros = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Image Section */}
-      <section className="relative mb-8 w-full h-96">
+      <section className="relative mb-8 w-full h-96 -z-10">
         <Image
           src={bannerimage} // Replace with your image path
           alt="Descriptive Alt Text"

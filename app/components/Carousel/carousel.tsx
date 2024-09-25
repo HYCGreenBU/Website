@@ -6,24 +6,8 @@ import { useSwipeable } from 'react-swipeable';
 
 const Carousel = ({ data }: { data: { image: string }[] }) => {
   const [currentImg, setCurrentImg] = useState(0);
-  // const [carouselSize, setCarouselSize] = useState({ width: 0, height: 0 });
   const carouselRef = useRef<HTMLDivElement | null>(null);
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (carouselRef.current) {
-  //       const { width, height } = carouselRef.current.getBoundingClientRect();
-  //       // setCarouselSize({ width, height });
-  //     }
-  //   };
-
-  //   handleResize();
-  //   window.addEventListener('resize', handleResize);
-
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
 
   const handlers = useSwipeable({
     onSwipedLeft: () => {
@@ -36,7 +20,7 @@ const Carousel = ({ data }: { data: { image: string }[] }) => {
   });
 
   return (
-    <div {...handlers} style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+    <div {...handlers}>
       <div
         ref={carouselRef}
         style={{
@@ -48,13 +32,13 @@ const Carousel = ({ data }: { data: { image: string }[] }) => {
         }}
       >
         {data.map((v, i) => (
-          <div key={i} style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+          <div key={i} >
             <Image
               alt={`carousel-image-${i}`}
-              fill
-              style={{ objectFit: 'cover' }} // Adjusted for full coverage
               src={v.image || 'https://random.imagecdn.app/500/500'}
-            />
+              width={500}
+              height={1200}
+              />
           </div>
         ))}
       </div>
