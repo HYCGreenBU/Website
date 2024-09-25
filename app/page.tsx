@@ -8,35 +8,35 @@ import therosimage from "../public/webpage/TherosWebsiteModel.webp";
 import coolingimage from "../public/webpage/NotusCooling.webp";
 import stackingimage from "../public/webpage/NotusStacking.webp";
 import visionimage from "../public/webpage/vision.webp";
-import blurredbanner from "../public/webpage/blurredHelios.webp";
+// import blurredbanner from "../public/webpage/blurredHelios.webp";
 
-import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
-import { Button } from "@nextui-org/button";
+// import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
+// import { Button } from "@nextui-org/button";
 
 export default function Home() {
-  const list = [
-    {
-      title: "Theros",
-      img: therosimage,
-      description: "Scalable IR Oven, customizable to 3,4 or 5 tiers.",
-    },
-    {
-      title: "Cooling",
-      img: coolingimage,
-      description: "Modular rapid cooling conveyor system, with over 50,000 CMH.",
-    },
-    {
-      title: "Stacking",
-      img: stackingimage,
-      description: "High-Speed stacking system, achieving up to 900UPM",
-    },
-    {
-      title: "Vision",
-      img: visionimage,
-      description: "Vision Inspection on the fly, implementing real-time deep learning algorithms.",
-    },
+  // const list = [
+  //   {
+  //     title: "Theros",
+  //     img: therosimage,
+  //     description: "Scalable IR Oven, customizable to 3,4 or 5 tiers.",
+  //   },
+  //   {
+  //     title: "Cooling",
+  //     img: coolingimage,
+  //     description: "Modular rapid cooling conveyor system, with over 50,000 CMH.",
+  //   },
+  //   {
+  //     title: "Stacking",
+  //     img: stackingimage,
+  //     description: "High-Speed stacking system, achieving up to 900UPM",
+  //   },
+  //   {
+  //     title: "Vision",
+  //     img: visionimage,
+  //     description: "Vision Inspection on the fly, implementing real-time deep learning algorithms.",
+  //   },
     
-  ];
+  // ];
 
 
 
@@ -71,38 +71,6 @@ export default function Home() {
             {/* <p className="text-xl text-center py-4 px-40"> Our commitment begins with a thorough consultation and needs assessment to understand your challenges, objectives, and operational requirements.</p> */}
           </section>
           
-          {/* Card Section Testing */ }
-        <section className="h-full PX-40">
-
-        <div>
-          <p className="text-5xl text-center py-2 font-montserrat font-medium mb-10"> Products </p>
-        </div>  
-
-        <div className="gap-2 grid grid-cols-2 lg:grid-cols-2">
-            {list.map((item, index) => (
-            <Card shadow="sm" key={index} className="bg-gray-800 rounded-3xl min-h-full py-4" >
-            <CardHeader className="text-3xl font-serif italics font-extrabold text-white px-12 py-10">
-              <p> {item.title}</p>
-            </CardHeader>
-            <CardBody className="overflow-visible p-0 rounded-3xl">
-              <Image
-                alt={item.title}
-                className="w-full h-full object-cover rounded-3xl py-8"
-                src={item.img}
-              />
-            </CardBody>
-            <CardFooter className="text-3xl rounded-3xl text-white h-20">
-              <p className="text-xl py-4 px-8 font-montserrat"> {item.description}</p>
-            </CardFooter>
-            <CardFooter className="text-lg rounded-3xl text-center text-white py-4 px-3">
-              {/* Insertbutton to find out more here */}
-              <Button color="default" variant="solid" className="px-8 font-serif text-white"> Find Out More </Button>
-              <Button color="default" variant="bordered" className="px-8 font-serif text-white"> Product Brochure </Button>
-            </CardFooter>
-            </Card>
-            ))}
-            </div>
-        </section>
 
         {/* Product Gallery  */}
 
