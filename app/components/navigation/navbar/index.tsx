@@ -46,7 +46,7 @@ const Navbar = () => {
                   About Us
                 </button>
                 {isDropdownOpen === 'About' && (
-                  <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg">
+                  <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg z-30">
                     <Link href="/pages/About/HYCGreenBU">
                       <p className="block px-4 py-2 hover:bg-gray-200">HYC Green BU</p>
                     </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
                     Markets
                   </button>
                   {isDropdownOpen === 'Markets' && (
-                    <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg">
+                    <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg z-30">
                       <Link href="/pages/Markets/FoodPackaging">
                         <p className="block px-4 py-2 hover:bg-gray-200">Food Service and Packaging</p>
                       </Link>
@@ -92,7 +92,7 @@ const Navbar = () => {
                     Products
                   </button>
                   {isDropdownOpen === 'Products' && (
-                    <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg">
+                    <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg z-30">
                       <Link href="/pages/Products/Theros">
                         <p className="block px-4 py-2 hover:bg-gray-200">Theros</p>
                       </Link>
@@ -123,7 +123,7 @@ const Navbar = () => {
                     Services
                   </button>
                   {isDropdownOpen === 'Services' && (
-                    <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg">
+                    <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg z-30">
                       <Link href="/pages/Services/Core">
                         <p className="block px-4 py-2 hover:bg-gray-200">Green BU Core</p>
                       </Link>
@@ -141,7 +141,7 @@ const Navbar = () => {
                     Contact
                   </button>
                   {isDropdownOpen === 'Contact' && (
-                    <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg">
+                    <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg z-30">
                       <Link href="/pages/Contact/RFI">
                         <p className="block px-4 py-2 hover:bg-gray-200">RFI</p>
                       </Link>

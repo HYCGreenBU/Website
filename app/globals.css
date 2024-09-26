@@ -27,7 +27,7 @@ body {
 } */
 
 .header {
-  @apply text-2xl md:text-4xl lg:text-6xl text-center font-montserrat mb-20 font-medium;
+  @apply text-2xl md:text-4xl lg:text-6xl text-center font-montserrat mb-4 font-semibold;
 }
 
 .subheader {
