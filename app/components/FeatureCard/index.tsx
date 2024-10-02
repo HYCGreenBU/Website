@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 interface FeatureCardProps {
     title: string;
@@ -9,17 +9,22 @@ interface FeatureCardProps {
 }
 
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, imgAlt, imgSrc }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ title, description }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center">
+    <div className="bg-white rounded-lg shadow-md p-4 flex flex-row items-start">
+      {/* <div className='absolute w-1/3 '>
       <Image 
         src={imgSrc}
         alt={imgAlt} 
         fill
+        className='object-cover'
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p>{description}</p>
+      </div> */}
+      <div className='flex-grow'>
+        <h3 className="text-xl font-bold mb-2 ">{title}</h3>
+        <p>{description}</p>
+      </div>
     </div>
   );
 };

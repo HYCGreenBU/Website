@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const Header = () => {
     return(
-        <div className="h-30 py-4">
-            <div className="flex justify-start px-4">
+        <div className="h-30 py-4 ">
+            <div className="flex justify-start px-4 ">
                 <Link href="/">
                     <Image
                         src = {logo}

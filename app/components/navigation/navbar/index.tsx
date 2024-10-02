@@ -72,13 +72,22 @@ const Navbar = () => {
                         <p className="block px-4 py-2 hover:bg-gray-200">Packaging</p>
                       </Link>
                       {/* <Link href="/product2"> */}
-                        <p className="block px-4 py-2 hover:bg-gray-200">Food Processing </p>
+                      <div className='block px-4 py-2 hover:bg-gray-200'>
+                        <p> Food Processing </p>
+                        <p> (Coming Soon) </p>
+                      </div>
                       {/* </Link> */}
                       {/* <Link href="/product2"> */}
-                        <p className="block px-4 py-2 hover:bg-gray-200">Automation</p>
+                      <div className='block px-4 py-2 hover:bg-gray-200'>
+                        <p>Automation</p>
+                        <p> (Coming Soon) </p>
+                      </div>
                       {/* </Link> */}
                       {/* <Link href="/product2"> */}
-                        <p className="block px-4 py-2 hover:bg-gray-200">Semi-Conductor</p>
+                      <div className='block px-4 py-2 hover:bg-gray-200'>
+                        <p> Semi-Conductor </p>
+                        <p> (Coming Soon) </p>
+                      </div>
                       {/* </Link> */}
                       
                     </div>
