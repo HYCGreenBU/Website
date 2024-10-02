@@ -13,8 +13,10 @@ import visionimage from "../public/webpage/vision.webp";
 // import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 // import { Button } from "@nextui-org/button";
 
+import ProductCard from "./components/productCard";
+
 import ImageSlider from "./components/Carousel/carousel";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 
 export default function Home() {
   // const list = [
@@ -42,6 +44,42 @@ export default function Home() {
   //   },
   // ];
 
+  const products = [
+    {
+      title: "Theros",
+      description: "Scalable IR Oven, customizable to 3,4 or 5 tiers.",
+      imgAlt: "Energy Efficiency",
+      imgSrc: "/webpage/TherosWebsiteModel.webp",
+      buttonLink: "/pages/Products/Theros"
+    },
+
+    {
+      title: "Cooling",
+      description:
+        "Modular rapid cooling conveyor system, with over 50,000 CMH.",
+      imgAlt: "Production Yield",
+      imgSrc: "/webpage/NotusCooling.webp",
+      buttonLink: "/pages/Products/Cooling"
+    },
+
+    {
+      title: "Stacking",
+      description: "High-Speed stacking system, achieving up to 900UPM",
+      imgAlt: "Quality Control",
+      imgSrc: "/webpage/NotusStacking.webp",
+      buttonLink: "/pages/Products/Cooling"
+    },
+
+    {
+      title: "Vision",
+      description:
+        "Vision Inspection on the fly, implementing real-time deep learning algorithms.",
+      imgAlt: "Recycle, Reuse",
+      imgSrc: "/webpage/vision.webp",
+      buttonLink: "/pages/Products/Vision"
+    },
+  ];
+
   return (
     <>
       {<Header />}
@@ -49,7 +87,7 @@ export default function Home() {
       <div className="bg-white min-w-[320px] mb-5">
         <div className="container mx-auto">
           {/*  Slider Section  */}
-          <main className="flex h-auto flex-col items-center justify-center py-2 px-8">
+          <main className="flex h-auto flex-col items-center justify-center py-2 px-8 bg-slate-200">
             <ImageSlider />
           </main>
 
@@ -64,7 +102,23 @@ export default function Home() {
             {/* <p className="text-xl text-center py-4 px-40"> Our commitment begins with a thorough consultation and needs assessment to understand your challenges, objectives, and operational requirements.</p> */}
           </section>
 
-          {/* Product Gallery  */}
+          {/* Product showreel */}
+        
+          <div className="mx-12">
+            <p className=" mx-12 font-montserrat text-3xl font-semibold "> Our Prodcuts </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mx-16">
+            {products.map((feature, index) => (
+              <ProductCard
+                key={index}
+                title={feature.title}
+                description={feature.description}
+                imgAlt={feature.imgAlt}
+                imgSrc={feature.imgSrc}
+                buttonLink={feature.buttonLink}
+              />
+            ))}
+          </div>
 
           {/* Theros */}
           <section className="">
@@ -173,17 +227,13 @@ export default function Home() {
 
           {/* Other Resoruces Section */}
           <section className="px-32">
-            <p className="text-3xl font-semibold mt-20 mb-4">
-              Other Resources
-            </p>
+            <p className="text-3xl font-semibold mt-20 mb-4">Other Resources</p>
             <p className="text-2xl font-medium mb-4">
               Addtional information on our products
             </p>
             <div className="flex ">
               <a href="/webpage/productBrochure.pdf" download>
-                <button className="buttonMain">
-                  Product Brochure
-                </button>
+                <button className="buttonMain">Product Brochure</button>
               </a>
             </div>
           </section>
@@ -192,22 +242,19 @@ export default function Home() {
 
           <section className="px-32">
             <p className="text-3xl font-semibold mt-20 mb-4">
-              Need help with these resources ? 
+              Need help with these resources ?
             </p>
             <p className="text-2xl font-medium mb-4">
-              Feel free to reach out and one of our teammates will get back to you as soon as possible.
+              Feel free to reach out and one of our teammates will get back to
+              you as soon as possible.
             </p>
-            <a >
-              <button className="buttonMain">
-                Contact us
-              </button>
+            <a>
+              <button className="buttonMain">Contact us</button>
             </a>
           </section>
-
-          
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

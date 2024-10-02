@@ -18,13 +18,15 @@ const HYCGreenBU = () => {
     </section>
 
     {/* Initial Content Section */}
-    <section className="mb-4 w-full h-auto mt-16 ">
-      <p className="font-montserrat font-semibold text-3xl text-left mb-12"> HYC Green Business Unit </p>
-      <p className="font-montserrat font-semibold text-2xl mb-2 text-left" > Green Industry Solutions </p>
-      <p className="font-montserrat text-lg text-left">
-        {" "} HYC Singapore GBU is formed to deeply invest in advancing sustainable innovation. Through customized standard solutions, the aim is to empower the green industry, promoting energy efficiency and responsible practices at the forefront. {" "}
-      </p>
-    </section>
+    <div className="mx-12 w-3/4 ">
+      <section className="mb-4 w-full h-auto mt-16 ">
+        <p className="font-montserrat font-semibold text-3xl text-left mb-12"> HYC Green Business Unit </p>
+        <p className="font-montserrat font-semibold text-2xl mb-2 text-left" > Green Industry Solutions </p>
+        <p className="font-montserrat text-lg text-left">
+          {" "} HYC Singapore GBU is formed to deeply invest in advancing sustainable innovation. Through customized standard solutions, the aim is to empower the green industry, promoting energy efficiency and responsible practices at the forefront. {" "}
+        </p>
+      </section>
+    </div>
 
 
     {/* Key Technologies Section */}

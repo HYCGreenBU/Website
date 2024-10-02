@@ -83,9 +83,9 @@ export default function ImageSlider(): JSX.Element {
   };
 
   return (
-    <div className="relative w-full mx-auto mt-6 bg-slate-300 rounded-3xl">
+    <div className="relative w-full mx-auto mt-6 bg-slate-200 rounded-3xl">
       <div
-        className="relative h-[460px] mx-12 group mt-8 bg-slate-300"
+        className="relative h-[460px] mx-12 group mt-8 bg-slate-200"
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseLeave}
       >
@@ -95,7 +95,7 @@ export default function ImageSlider(): JSX.Element {
           layout="fill"
           className="rounded-xl transition-all duration-500 ease-in-out cursor-pointer object-cover"
         />
-        <div className="absolute p-4 h-auto w-full z-10 bg-slate-300 bg-opacity-80 bottom-0 ">
+        <div className="absolute p-4 h-auto w-full z-10 bg-slate-200 bg-opacity-80 bottom-0 ">
           <div className="flex justify-between items-center w-full py-4 px-6">
             <div className="flex-col">
               <p className=" text-black font-bold text-3xl font-montserrat">
@@ -125,25 +125,25 @@ export default function ImageSlider(): JSX.Element {
       {/* Side Buttons */}
       <div className="mt-8">
         <button
-          className="absolute left-0 top-1/2 transform h-[459px] rounded-xl hover:bg-slate-400 mx-1 -mt-[10px] -translate-y-1/2 bg-slate-300 text-white p-2 group"
+          className="absolute left-0 top-1/2 transform h-[459px] rounded-xl hover:bg-slate-400 mx-1 -mt-[10px] -translate-y-1/2 bg-slate-200 text-white p-2 group"
           onClick={prevSlide}
         >
           <ChevronLeft className="text-gray-400 group-hover:text-white" />
         </button>
         <button
-          className="absolute right-0 top-1/2 transform h-[459px] rounded-xl hover:bg-slate-400 mx-1 -mt-[10px] -translate-y-1/2 bg-slate-300 text-white p-2 group"
+          className="absolute right-0 top-1/2 transform h-[459px] rounded-xl hover:bg-slate-400 mx-1 -mt-[10px] -translate-y-1/2 bg-slate-200 text-white p-2 group"
           onClick={nextSlide}
         >
           <ChevronRight className="text-gray-400 group-hover:text-white" />
         </button>
-        <div className="flex justify-center mt-4 bg-slate-300 mb-4">
+        <div className="flex justify-center mt-4 bg-slate-200 mb-4">
           {images.map((_, index) => (
             <div
               key={index}
               className={`h-1 w-10 mx-1 ${
                 index === currentIndex
                   ? "bg-[#beff46] rounded-xl"
-                  : "bg-gray-300 rounded-xl"
+                  : "bg-gray-400 rounded-xl"
               } transition-all duration-500 ease-in-out`}
             ></div>
           ))}
