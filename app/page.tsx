@@ -10,10 +10,11 @@ import stackingimage from "../public/webpage/NotusStacking.webp";
 import visionimage from "../public/webpage/vision.webp";
 // import blurredbanner from "../public/webpage/blurredHelios.webp";
 
-// import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
+// import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 // import { Button } from "@nextui-org/button";
 
 import ImageSlider from "./components/Carousel/carousel";
+import Footer from "./components/Footer"
 
 export default function Home() {
   // const list = [
@@ -25,7 +26,8 @@ export default function Home() {
   //   {
   //     title: "Cooling",
   //     img: coolingimage,
-  //     description: "Modular rapid cooling conveyor system, with over 50,000 CMH.",
+  //     description:
+  //       "Modular rapid cooling conveyor system, with over 50,000 CMH.",
   //   },
   //   {
   //     title: "Stacking",
@@ -35,41 +37,24 @@ export default function Home() {
   //   {
   //     title: "Vision",
   //     img: visionimage,
-  //     description: "Vision Inspection on the fly, implementing real-time deep learning algorithms.",
+  //     description:
+  //       "Vision Inspection on the fly, implementing real-time deep learning algorithms.",
   //   },
-
   // ];
 
   return (
     <>
       {<Header />}
       {<Navbar />}
-      <div className="bg-white min-w-[320px]">
+      <div className="bg-white min-w-[320px] mb-5">
         <div className="container mx-auto">
-          {/* Banner Seciton
-          <section className="relative mb-8 w-full h-96">
-            <Image
-              src={blurredbanner} // Replace with your image path
-              alt="Descriptive Alt Text"
-              className="w-full inset-0 object-fill h-48"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-white bg-opacity-100 border border-gray-300 py-16 px-36">
-                <p className="text-6xl font-semibold text-gray-800 font-serif"> 
-                  HYC Green BU
-                </p>
-              </div>
-            </div>
-          </section>
-        */}
-
-          {/*  Slider Test  */}
-          <main className="flex h-auto flex-col items-center justify-center py-2">
+          {/*  Slider Section  */}
+          <main className="flex h-auto flex-col items-center justify-center py-2 px-8">
             <ImageSlider />
           </main>
 
           {/* What we do Section */}
-          <section className="mb-4 w-full h-auto mt-24 ">
+          <section className="mb-4 w-full h-auto mt-16 ">
             <p className="header"> Our Services </p>
             <p className="subheader mx-32">
               {" "}
@@ -114,108 +99,115 @@ export default function Home() {
           </section>
 
           {/* Cooling */}
-          <section className="py-4 mt-6 w-full px-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div>
-                <Image
-                  src={coolingimage} // Replace with your image path
-                  alt="Image 1"
-                  className="w-full h-auto object-contain"
-                />
-                <p className="text-2xl text-center py-2 font-semibold">
-                  Cooling
-                </p>
-                <p className="text-2xl text-center py-2">
-                  {" "}
-                  Rapid Cooling Conveyor{" "}
-                </p>
-                <div className="flex justify-center py-3">
-                  <Link href="/pages/Products/Cooling" passHref>
-                    <button className="px-20 py-4 bg-black text-white rounded align-center text-xl">
-                      View More
-                    </button>
-                  </Link>
+          <div className="flex justify-around flex-row">
+            <section className="py-4 mt-6 w-full ">
+              <div className="bg-slate-200 w-full h-auto flex lg:flex-row  md:flex-row justify-around ">
+                <div className="w-1/4">
+                  <Image
+                    src={coolingimage} // Replace with your image path
+                    alt="Image 1"
+                    className="h-auto object-contain"
+                  />
+                  <p className="text-2xl text-center py-2 font-semibold">
+                    Cooling
+                  </p>
+                  <p className="text-2xl text-center py-2">
+                    {" "}
+                    Rapid Cooling Conveyor{" "}
+                  </p>
+                  <div className="flex justify-center py-3">
+                    <Link href="/pages/Products/Cooling" passHref>
+                      <button className="px-20 py-4 bg-black text-white rounded-3xl align-center text-xl md:text-lg ">
+                        View More
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="w-1/4">
+                  {/* Vision */}
+                  <Image
+                    src={visionimage} // Replace with your image path
+                    alt="Image 2"
+                    className="h-auto object-contain"
+                  />
+                  <p className="text-2xl text-center py-2 font-semibold">
+                    Vision
+                  </p>
+                  <p className="text-2xl text-center py-2">
+                    {" "}
+                    Vision inspection on the fly{" "}
+                  </p>
+                  <div className="flex justify-center py-3">
+                    <Link href="/pages/Products/Vision" passHref>
+                      <button className="px-20 py-4 bg-black text-white rounded-3xl align-center text-xl md:text-lg">
+                        View More
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="w-1/4">
+                  {/* Stacking */}
+                  <Image
+                    src={stackingimage} // Replace with your image path
+                    alt="Image 3"
+                    className="h-auto object-contain"
+                  />
+                  <p className="text-2xl text-center py-2 font-semibold">
+                    Stacking
+                  </p>
+                  <p className="text-2xl text-center py-2 ">
+                    {" "}
+                    Rapid stacking of products{" "}
+                  </p>
+                  <div className="flex justify-center py-2">
+                    <Link href="/pages/Products/Stacking" passHref>
+                      <button className="px-20 py-4 bg-black text-white rounded-3xl align-center text-xl md:text-lg">
+                        View More
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div>
-                {/* Vision */}
-                <Image
-                  src={visionimage} // Replace with your image path
-                  alt="Image 2"
-                  className="w-full h-auto object-contain"
-                />
-                <p className="text-2xl text-center py-2 font-semibold">
-                  Vision
-                </p>
-                <p className="text-2xl text-center py-2">
-                  {" "}
-                  Vision inspection on the fly{" "}
-                </p>
-                <div className="flex justify-center py-3">
-                  <Link href="/pages/Products/Vision" passHref>
-                    <button className="px-20 py-4 bg-black text-white rounded align-center text-xl">
-                      View More
-                    </button>
-                  </Link>
-                </div>
-              </div>
-              <div>
-                {/* Stacking */}
-                <Image
-                  src={stackingimage} // Replace with your image path
-                  alt="Image 3"
-                  className="w-full h-auto object-contain"
-                />
-                <p className="text-2xl text-center py-2 font-semibold">
-                  Stacking
-                </p>
-                <p className="text-2xl text-center py-2 ">
-                  {" "}
-                  Rapid stacking of products{" "}
-                </p>
-                <div className="flex justify-center py-2">
-                  <Link href="/pages/Products/Stacking" passHref>
-                    <button className="px-20 py-4 bg-black text-white rounded align-center text-xl">
-                      View More
-                    </button>
-                  </Link>
-                </div>
-              </div>
+            </section>
+          </div>
+
+          {/* Other Resoruces Section */}
+          <section className="px-32">
+            <p className="text-3xl font-semibold mt-20 mb-4">
+              Other Resources
+            </p>
+            <p className="text-2xl font-medium mb-4">
+              Addtional information on our products
+            </p>
+            <div className="flex ">
+              <a href="/webpage/productBrochure.pdf" download>
+                <button className="buttonMain">
+                  Product Brochure
+                </button>
+              </a>
             </div>
           </section>
 
-          {/* Other Resoruces Section */}
-          <section className="px-44">
+          {/* Contact Us Section */}
+
+          <section className="px-32">
             <p className="text-3xl font-semibold mt-20 mb-4">
-              {" "}
-              Other Resources{" "}
+              Need help with these resources ? 
             </p>
-            <a href="/webpage/productBrochure.pdf" download>
-              <button className="px-28 py-5 bg-black text-white rounded align-center text-xl">
-                Product Brochure
+            <p className="text-2xl font-medium mb-4">
+              Feel free to reach out and one of our teammates will get back to you as soon as possible.
+            </p>
+            <a >
+              <button className="buttonMain">
+                Contact us
               </button>
             </a>
           </section>
 
-          {/* Contact Us Section */}
-          <section className="mt-24">
-            <p className="text-6xl text-center font-semibold ">
-              {" "}
-              Need help with these Resources ?{" "}
-            </p>
-            <p className="py-6 text-2xl text-center font-semibold">
-              {" "}
-              Feel free to reach out and one of our teammates will get back to
-              you as soon as possible.{" "}
-            </p>
-            <div className="flex justify-center">
-              <button className="px-28 py-5 bg-black text-white rounded align-center text-xl">
-                Contact Us
-              </button>
-            </div>
-          </section>
+          
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

@@ -33,3 +33,7 @@ body {
 .subheader {
   @apply text-xl md:text-2xl lg:text-4xl text-center font-montserrat mb-20 font-medium;
 }
+
+.buttonMain {
+  @apply w-56 py-2 bg-sky-700 text-white rounded text-xl flex justify-center align-middle;
+}

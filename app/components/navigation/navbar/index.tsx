@@ -68,8 +68,8 @@ const Navbar = () => {
                   </button>
                   {isDropdownOpen === 'Markets' && (
                     <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg z-30">
-                      <Link href="/pages/Markets/FoodPackaging">
-                        <p className="block px-4 py-2 hover:bg-gray-200">Food Service and Packaging</p>
+                      <Link href="/pages/Markets/Packaging">
+                        <p className="block px-4 py-2 hover:bg-gray-200">Packaging</p>
                       </Link>
                       {/* <Link href="/product2"> */}
                         <p className="block px-4 py-2 hover:bg-gray-200">Food Processing </p>
@@ -125,7 +125,10 @@ const Navbar = () => {
                   {isDropdownOpen === 'Services' && (
                     <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg z-30">
                       <Link href="/pages/Services/Core">
-                        <p className="block px-4 py-2 hover:bg-gray-200">Green BU Core</p>
+                        <p className="block px-4 py-2 hover:bg-gray-200"> Core Services </p>
+                      </Link>
+                      <Link href="/pages/Services/GBU">
+                        <p className="block px-4 py-2 hover:bg-gray-200"> GBU </p>
                       </Link>
                       <Link href="/pages/Services/Partnership">
                         <p className="block px-4 py-2 hover:bg-gray-200">Partnerships</p>
