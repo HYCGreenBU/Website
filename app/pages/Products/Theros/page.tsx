@@ -58,16 +58,16 @@ const Theros = () => {
           {/* Text on the right */}
           <div className="w-full md:w-1/2 px-4">
             <h3 className="text-4xl font-bold mb-4">Theros</h3>
-            <p className="text-xl mb-4">
+            <p className="lg:text-xl mb-4 md:text-lg sm:text-base">
               Theros is a Spiral Infra-Red Oven that is capabale of a max
               temperature of 230°C.
             </p>
-            <p className="text-xl mb-4">
+            <p className="lg:text-xl mb-4 md:text-lg sm:text-base">
               This Oven has enclosed temperature-controlled zones, a compact
               footprint of (9.5mx6m), and offers scalable options with 7, 9, or
               11 heating zones.
             </p>
-            <p className="text-xl">
+            <p className="lg:text-xl mb-4 md:text-lg sm:text-base">
               It can handle a maximum output of 250 UPM and provides variable
               belt speeds, including a top speed of 120 FPM.
             </p>
@@ -76,9 +76,10 @@ const Theros = () => {
       </div>
 
       {/* Product array Section */}
-      <section className="py-24 px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div>
+      <section className="py-24 lg:px-12 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+          {/* Test margins for phone screen */}
+          <div className="sm:my-4">
             <Image
               src={heaterboximage} // Replace with your image path
               alt="Image 1"
@@ -86,7 +87,7 @@ const Theros = () => {
               height={400}
               className="w-full h-1/2 object-fill"
             />
-            <p className="py-4 text-3xl text-center font-semibold"> Heating </p>
+            <p className="py-4 text-2xl md:text-3xl text-center font-semibold"> Heating </p>
             <p className="text-xl py-6 text-justify px-4">
               Our system features modular heater boxes for easy replacements,
               efficient Infrared heating, precise temperature control, and the
@@ -94,7 +95,7 @@ const Theros = () => {
               all while remaining energy efficient.
             </p>
           </div>
-          <div>
+          <div className="my-8">
             <Image
               src={theroslayerimage} // Replace with your image path
               alt="Image 2"
@@ -113,7 +114,7 @@ const Theros = () => {
               adaptable solution for your specific needs.
             </p>
           </div>
-          <div>
+          <div className="my-8">
             <Image
               src={therosXrayimage} // Replace with your image path
               alt="Image 3"
@@ -138,41 +139,50 @@ const Theros = () => {
 
       {/* Technical Specifications Table */}
 
-      {/* Tabs Section */}
-      <section className="mb-16 mt-4">
-        <div className="flex justify-center space-x-4">
-          <button
-            onClick={() => setActiveTab("specs")}
-            className={`text-2xl px-6 py-2 ${
-              activeTab === "specs"
-                ? "font-bold border-b-4 border-blue-500"
-                : ""
-            }`}
-          >
-            Technical Specifications
-          </button>
-          <button
-            onClick={() => setActiveTab("features")}
-            className={`text-2xl px-6 py-2 ${
-              activeTab === "features"
-                ? "font-bold border-b-4 border-blue-500"
-                : ""
-            }`}
-          >
-            Features
-          </button>
-          <button
-            onClick={() => setActiveTab("speed")}
-            className={`text-2xl px-6 py-2 ${
-              activeTab === "speed"
-                ? "font-bold border-b-4 border-blue-500"
-                : ""
-            }`}
-          >
-            Customization Options
-          </button>
-        </div>
-      </section>
+{/* Tabs Section */}
+<section className="mb-16 mt-4">
+  {/* Dropdown for small screens */}
+  <div className="block sm:hidden px-4 sm:py-8">
+    <select
+      value={activeTab}
+      onChange={(e) => setActiveTab(e.target.value)}
+      className="w-full p-2 border border-gray-300 rounded-md text-lg"
+    >
+      <option value="specs">Technical Specifications</option>
+      <option value="features">Features</option>
+      <option value="speed">Customization Options</option>
+    </select>
+  </div>
+
+  {/* Tab buttons for medium and larger screens */}
+  <div className="hidden sm:flex justify-center space-x-4 overflow-x-auto">
+    <button
+      onClick={() => setActiveTab("specs")}
+      className={`text-lg md:text-2xl px-4 md:px-6 py-2 whitespace-nowrap ${
+        activeTab === "specs" ? "font-bold border-b-4 border-blue-500" : ""
+      }`}
+    >
+      Technical Specifications
+    </button>
+    <button
+      onClick={() => setActiveTab("features")}
+      className={`text-lg md:text-2xl px-4 md:px-6 py-2 whitespace-nowrap ${
+        activeTab === "features" ? "font-bold border-b-4 border-blue-500" : ""
+      }`}
+    >
+      Features
+    </button>
+    <button
+      onClick={() => setActiveTab("speed")}
+      className={`text-lg md:text-2xl px-4 md:px-6 py-2 whitespace-nowrap ${
+        activeTab === "speed" ? "font-bold border-b-4 border-blue-500" : ""
+      }`}
+    >
+      Customization Options
+    </button>
+  </div>
+</section>
+
 
       {/* 
       // <div className="text-lg px-4">
@@ -299,10 +309,11 @@ const Theros = () => {
         )}
 
         {activeTab === "speed" && (
-          <div className="text-lg px-12">
+          <div className="text-lg md:mx-12 sm:mx-4">
             <h3 className="text-4xl font-bold mb-6">Customization Options</h3>
 
             {/* Customization Table */}
+            <div className="overflow-x-auto"> 
             <table className="min-w-full border border-gray-300">
               <thead>
                 <tr className="bg-gray-200">
@@ -339,6 +350,7 @@ const Theros = () => {
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
         )}
       </section>
