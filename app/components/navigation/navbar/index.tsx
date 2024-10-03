@@ -53,9 +53,9 @@ const Navbar = () => {
                     <Link href="/pages/About/Quality">
                       <p className="block px-4 py-2 hover:bg-gray-200">Our Commitment to Quality</p>
                     </Link>
-                    <Link href="/pages/About/EnvironmentalPolicy">
+                    {/* <Link href="/pages/About/EnvironmentalPolicy">
                       <p className="block px-4 py-2 hover:bg-gray-200">Environmental Policy</p>
-                    </Link>
+                    </Link> */}
                   </div>
                 )}
               </li>
@@ -78,16 +78,16 @@ const Navbar = () => {
                       </div>
                       {/* </Link> */}
                       {/* <Link href="/product2"> */}
-                      <div className='block px-4 py-2 hover:bg-gray-200'>
+                      {/* <div className='block px-4 py-2 hover:bg-gray-200'>
                         <p>Automation</p>
                         <p> (Coming Soon) </p>
-                      </div>
+                      </div> */}
                       {/* </Link> */}
                       {/* <Link href="/product2"> */}
-                      <div className='block px-4 py-2 hover:bg-gray-200'>
+                      {/* <div className='block px-4 py-2 hover:bg-gray-200'>
                         <p> Semi-Conductor </p>
                         <p> (Coming Soon) </p>
-                      </div>
+                      </div> */}
                       {/* </Link> */}
                       
                     </div>
@@ -105,9 +105,10 @@ const Navbar = () => {
                       <Link href="/pages/Products/Theros">
                         <p className="block px-4 py-2 hover:bg-gray-200">Theros</p>
                       </Link>
-                      <Link href="/pages/Products/Helios">
+                      {/* <Link href="/pages/Products/Helios">
                         <p className="block px-4 py-2 hover:bg-gray-200">Helios</p>
-                      </Link>
+                      </Link> */}
+                      {/*  Sub menu for Notus ?  */ }
                       <Link href="/pages/Products/Cooling">
                         <p className="block px-4 py-2 hover:bg-gray-200">Cooling</p>
                       </Link>
@@ -117,9 +118,9 @@ const Navbar = () => {
                       <Link href="/pages/Products/Vision">
                         <p className="block px-4 py-2 hover:bg-gray-200">Vision</p>
                       </Link>
-                      <Link href="/pages/Products/Cleaning">
+                      {/* <Link href="/pages/Products/Cleaning">
                         <p className="block px-4 py-2 hover:bg-gray-200">Cleaning</p>
-                      </Link>
+                      </Link> */}
                     </div>
                   )} 
                 </li>
@@ -133,15 +134,15 @@ const Navbar = () => {
                   </button>
                   {isDropdownOpen === 'Services' && (
                     <div className="absolute top-full left-0 bg-white text-black mt-2 py-2 w-48 shadow-lg z-30">
-                      <Link href="/pages/Services/Core">
+                      {/* <Link href="/pages/Services/Core">
                         <p className="block px-4 py-2 hover:bg-gray-200"> Core Services </p>
-                      </Link>
+                      </Link> */}
                       <Link href="/pages/Services/GBU">
                         <p className="block px-4 py-2 hover:bg-gray-200"> GBU </p>
                       </Link>
-                      <Link href="/pages/Services/Partnership">
+                      {/* <Link href="/pages/Services/Partnership">
                         <p className="block px-4 py-2 hover:bg-gray-200">Partnerships</p>
-                      </Link>
+                      </Link> */}
                     </div>
                   )}
                 </li>
@@ -200,9 +201,9 @@ const Navbar = () => {
                      <Link href="/pages/About/Quality">
                        <p className="block px-4 py-2 hover:bg-gray-200">Our Commitment to Quality</p>
                      </Link>
-                     <Link href="/pages/About/EnvironmentalPolicy">
+                     {/* <Link href="/pages/About/EnvironmentalPolicy">
                        <p className="block px-4 py-2 hover:bg-gray-200">Environmental Policy</p>
-                     </Link>
+                     </Link> */}
                    </ul>
                  </div>
                )}
@@ -226,14 +227,14 @@ const Navbar = () => {
                         <p className="block px-4 py-2 hover:bg-gray-200">Food Service and Packaging</p>
                       </Link>
                       {/* <Link href="/product2"> */}
-                        <p className="block px-4 py-2 hover:bg-gray-200">Food Processing </p>
+                        <p className="block px-4 py-2 hover:bg-gray-200">Food Processing (Coming Soon) </p>
+                      {/* </Link> */}
+                      {/* Link href="/product2"> */}
+                        {/* <p className="block px-4 py-2 hover:bg-gray-200">Automation</p> */}
                       {/* </Link> */}
                       {/* <Link href="/product2"> */}
-                        <p className="block px-4 py-2 hover:bg-gray-200">Automation</p>
-                      {/* </Link> */}
-                      {/* <Link href="/product2"> */}
-                        <p className="block px-4 py-2 hover:bg-gray-200">Semi-Conductor</p>
-                      {/* </Link> */}
+                        {/* <p className="block px-4 py-2 hover:bg-gray-200">Semi-Conductor</p> */}
+                      {/* </Link> */ } 
                       </ul>
                     </div>
                   )}
@@ -256,9 +257,9 @@ const Navbar = () => {
                       <Link href="/pages/Products/Theros">
                         <p className="block px-4 py-2 hover:bg-gray-200">Theros</p>
                       </Link>
-                      <Link href="/pages/Products/Helios">
+                      {/* <Link href="/pages/Products/Helios">
                         <p className="block px-4 py-2 hover:bg-gray-200">Helios</p>
-                      </Link>
+                      </Link> */}
                       <Link href="/pages/Products/Cooling">
                         <p className="block px-4 py-2 hover:bg-gray-200">Cooling</p>
                       </Link>
@@ -268,9 +269,9 @@ const Navbar = () => {
                       <Link href="/pages/Products/Vision">
                         <p className="block px-4 py-2 hover:bg-gray-200">Vision</p>
                       </Link>
-                      <Link href="/pages/Products/Cleaning">
+                      {/* <Link href="/pages/Products/Cleaning">
                         <p className="block px-4 py-2 hover:bg-gray-200">Cleaning</p>
-                      </Link>
+                      </Link> */}
                       </ul>
                     </div>
                   )}
@@ -291,12 +292,12 @@ const Navbar = () => {
                       </svg>
                     </button>
                     <ul className="p-8">
-                      <Link href="/pages/Services/Core">
-                        <p className="block px-4 py-2 hover:bg-gray-200">Green BU Core</p>
+                      <Link href="/pages/Services/GBU">
+                        <p className="block px-4 py-2 hover:bg-gray-200">GBU</p>
                       </Link>
-                      <Link href="/pages/Services/Partnership">
+                      {/* <Link href="/pages/Services/Partnership">
                         <p className="block px-4 py-2 hover:bg-gray-200">Partnerships</p>
-                      </Link>
+                      </Link> */}
                       </ul>
                     </div>
                   )}

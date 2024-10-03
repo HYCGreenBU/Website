@@ -1,69 +1,166 @@
+"use client";
+
 import Image from "next/image";
 // import placeholderimage from "../../../media/Images/placeholderimage.jpg";
-import bannerimage from "../../../../public/webpage/blurredHelios.webp";
 import visionimage from "../../../../public/webpage/vision.webp";
+import { useState } from "react";
+import { FaCheckCircle, FaEye, FaCogs, FaTools } from "react-icons/fa"; // Example icons
+import TherosFeatureCard from "@/app/components/TherosFeatureCard";
 
 const Vision = () => {
+  const [activeTab, setActiveTab] = useState("specs");
+
+  const technicalSpecifications = [
+    { title: "System Dimension (m)", content: "????" },
+    { title: "Types of Defects", content: "10+" },
+    { title: "Detection Method", content: "4 x 4 Megapixel Cameras" },
+    { title: "Conveyor Speed", content: "0.9m/s" },
+    { title: "Conveyor Material", content: "???" },
+    { title: "Output", content: "4 x 120UPM (480 UPM)" },
+    { title: "Inspection Coverage", content: "360° (except underside of flange)" },
+    { title: "Customer’s Product Size", content: "< Ø230 x 150 mm H" },
+    { title: "Power", content: "AC 415V 3 phase 50 Hz" },
+    { title: "Belt Width", content: "660mm" },
+  ];
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      {/* Image Section */}
-      <section className="relative mb-8 w-full h-96">
-        <Image
-          src={bannerimage} // Replace with your image path
-          alt="Descriptive Alt Text"
-          objectFit="cover"
-          layout="fill"
-          className="absolute inset-0 object-cover fill"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-white bg-opacity-100 border border-gray-300 py-16 px-36">
-            <p className="text-8xl font-semibold text-gray-800 font-serif"> 
-              Vision Module
+    <div className="container mx-auto">
+      <div className="min-h-screen content-center">
+        {/* Photo + Text Section */}
+        <section className="flex flex-col md:flex-row items-center justify-between mb-16 mx-12">
+          {/* Image on the left */}
+          <div className="w-full md:w-1/2 mb-8 md:mb-0">
+            <Image
+              src={visionimage} // Replace with your image
+              alt="Heater Box"
+              width={600}
+              height={400}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          {/* Text on the right */}
+          <div className="w-full md:w-1/2 px-4">
+            <h3 className="text-4xl font-bold mb-4">Vision</h3>
+            <p className="text-xl mb-4">
+              Another part of the Backend Automation line, the Vision Module is
+              capable of vision inspection at speeds up to 0.9m/s. 
+            </p>
+            <p className="text-xl mb-4">
+              It can detect defects as small as 5mm or even smaller with camera
+              upgrades. Deep learning algorithm reduces set up time and
+              increases the number of defect patterns detectable.
             </p>
           </div>
+        </section>
+      </div>
+
+      {/* Brief Description */}
+      <section className="mt-6 mb-16 mx-12">
+        <p className="font-medium leading-relaxed text-xl text-left ">
+          The system stores images of detected defects for up to a week,
+          providing a comprehensive archive for further analysis and quality
+          assessment.
+        </p>
+        <p className="font-medium leading-relaxed text-xl py-4 text-left ">
+          This feature ensures that any anomalies can be reviewed and assessed
+          for improvement or optimization in production processes.
+        </p>
+      </section>
+
+      {/* Technical Spec and Features Section  */}
+      {/* Tabs Section */}
+      <section className="mb-16">
+        <div className="flex justify-center space-x-4">
+          <button
+            onClick={() => setActiveTab("specs")}
+            className={`text-2xl px-6 py-2 ${
+              activeTab === "specs"
+                ? "font-bold border-b-4 border-blue-500"
+                : ""
+            }`}
+          >
+            Technical Specifications
+          </button>
+          <button
+            onClick={() => setActiveTab("features")}
+            className={`text-2xl px-6 py-2 ${
+              activeTab === "features"
+                ? "font-bold border-b-4 border-blue-500"
+                : ""
+            }`}
+          >
+            Features
+          </button>
         </div>
       </section>
+      {/* Tab Content Section */}
+      <section>
+        {activeTab === "specs" && (
+          <div className="text-lg px-4">
+            <section className=" px-12">
+              <h3 className="text-4xl font-bold mb-6">
+                {" "}
+                Techincal Specifications{" "}
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {technicalSpecifications.map((spec, index) => (
+                  <TherosFeatureCard
+                    key={index}
+                    title={spec.title}
+                    content={spec.content}
+                  />
+                ))}
+              </div>
+            </section>
+          </div>
+        )}
 
-      {/* Brief Description */}
-      <section className="mt-6 mb-0 px-48">
-        <p className="font-semibold text-5xl py-6 text-center"> Vision Systems </p>
-        <p className="font-medium leading-relaxed text-xl py-4 px-40 text-justify "> The vision defect detection system is capable of identifying up to 10 distinct defects, with the flexibility to accommodate additional defect patterns as needed. Equipped with four 4-megapixel cameras per lane, this setup ensures comprehensive coverage and high-resolution imaging for precise defect detection. Utilizing machine learning techniques, the system optimizes setup time while enhancing its capacity to identify various defect patterns, enabling a more adaptive and efficient detection process. Operating at a speed of 120 units per minute (UPM) per lane, it thoroughly inspects all aspects of the product, except for areas beneath the flange, ensuring thorough scrutiny across the entirety of the product surface. </p>
-      </section>
-      
-      
-      {/* Notus Image Section */}
-      <section className="mt-0 flex justify-center ">
-        <Image           
-              src={visionimage} // Replace with your image path
-              alt="Image 4"
-              className="w-3/4 h-auto object-cover"
-            />
-      </section>
+        {activeTab === "features" && (
+          <div className="text-lg px-12">
+            <h3 className="text-4xl font-bold mb-6">Features</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Feature Card 1 */}
+              <div className="flex items-center bg-gray-100 p-4 rounded-lg shadow-lg">
+                <FaCheckCircle className="text-blue-500 text-4xl mr-4" />
+                <div>
+                  <h4 className="text-xl font-semibold">
+                    CE & UL Certified standard components
+                  </h4>
+                </div>
+              </div>
 
-      {/* Brief Description */}
-      <section className="mt-6 mb-0 px-48">
-        <p className="font-semibold text-6xl py-6 text-left justify-center"> Notus Vision System </p>
-        <p className="font-medium leading-relaxed text-xl py-4 text-left ">The vision defect detection system boasts the capability to identify 10 predefined defects, with the flexibility to accommodate additional defect types as necessary. It excels in detecting defects as minute as 5mm, and an optional camera upgrade further enhances its capacity to identify even smaller imperfections. Operating at an impressive speed of 0.9 meters per second, the system detects defects seamlessly and in real-time during production. Leveraging a sophisticated deep learning algorithm, it not only identifies defects but also categorizes them based on their type, facilitating efficient quality control processes. </p>
-        <p className="font-medium leading-relaxed text-xl py-4 text-left "> Moreover, the system stores images of detected defects for up to a week, providing a comprehensive archive for further analysis and quality assessment. This feature ensures that any anomalies can be reviewed and assessed for improvement or optimization in production processes.</p>
-      </section>
+              {/* Feature Card 3 */}
+              <div className="flex items-center bg-gray-100 p-4 rounded-lg shadow-lg">
+                <FaCogs className="text-blue-500 text-4xl mr-4" />
+                <div>
+                  <h4 className="text-xl font-semibold">
+                    Upgrade kit available for different products
+                  </h4>
+                </div>
+              </div>
 
- 
-      {/* Feautres Section */}
-      <section className="flex flex-col justify-center mb-10 mt-0">
-        <p className="text-7xl text-center font-semibold underline mb-10 mt-20"> Other Features </p>
-        <ul className="text-center font-medium text-2xl">
-          <li> • CE and UL certified standard components </li>
-          <li> • Upgrade kit available for different products </li>
-          <li> • Modular design for single lane use </li>
-        </ul>
-      </section>
+              {/* Feature Card 5 */}
+              <div className="flex items-center bg-gray-100 p-4 rounded-lg shadow-lg">
+                <FaEye className="text-blue-500 text-4xl mr-4" />
+                <div>
+                  <h4 className="text-xl font-semibold">AI-based defect detection</h4>
+                </div>
+              </div>
 
-      {/* Video Section */}
-      <section className="mb-8 flex justify-center" >
-        <iframe className="w-3/4 aspect-[16/9]" src="https://www.youtube.com/embed/u31qwQUeGuM?si=0s0X583WBdYv47D1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+              {/* Feature Card 6 */}
+              <div className="flex items-center bg-gray-100 p-4 rounded-lg shadow-lg">
+                <FaTools className="text-blue-500 text-4xl mr-4" />
+                <div>
+                  <h4 className="text-xl font-semibold">
+                    {" "}
+                    Modular design scalable to multiple lanes{" "}
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
-
-      
     </div>
   );
 };
