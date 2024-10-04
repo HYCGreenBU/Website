@@ -87,7 +87,7 @@ export default function Home() {
         <div className="mx-12">
           <p className=" mx-12 font-montserrat text-3xl font-semibold ">
             {" "}
-            Our Prodcuts{" "}
+            Our Products{" "}
           </p>
         </div>
 
