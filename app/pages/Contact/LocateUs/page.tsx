@@ -2,7 +2,13 @@
 
 // import MyMap from "@/app/components/Map";
 
-// const LocateUs = () => {
+const LocateUs = () => {
+  return(
+    <div> LOL </div>
+  )
+}
+
+export default LocateUs;
 
 //   return (
 //     <div>
