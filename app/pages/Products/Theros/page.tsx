@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 // import placeholderimage from "../../../media/Images/placeholderimage.jpg";
-import heaterboximage from "../../../../public/webpage/heaterbox.webp";
-import therosXrayimage from "../../../../public/webpage/SingleBeltWebsiteModel.webp";
-import theroslayerimage from "../../../../public/webpage/Scalability Website Model.webp";
-import therosimage from "../../../../public/webpage/TherosWebsiteModel.webp";
+// import heaterboximage from "../../../../public/webpage/heaterbox.webp";
+// import therosXrayimage from "../../../../public/webpage/SingleBeltWebsiteModel.webp";
+// import theroslayerimage from "../../../../public/webpage/Scalability Website Model.webp";
+import therosimage from "../../../../public/webpage/therosAngled.png";
 import { useState } from "react";
 
 import {
@@ -32,6 +32,24 @@ const Theros = () => {
     { title: "Customer’s Product Size", content: "< Ø230 x 150 mm H" },
     { title: "Power", content: "AC 415V 3 phase 50 Hz" },
     { title: "Belt Width", content: "660mm" },
+  ];
+
+  const TherosFeatureData = [
+    {
+      title: "Heating",
+      content:
+        "Our system features modular heater boxes for easy replacements, efficient Infrared heating, precise temperature control, and the capability to reach higher temperatures than conventional ovens, all while remaining energy efficient.",
+    },
+    {
+      title: "Scalability",
+      content:
+        "Designed with scalability in mind, it allows varying numbers of zones (7, 9, 11). This flexibility more configuration of curing times to suit diverse curing time requirements, providing a highly adaptable solution for your specific needs.",
+    },
+    {
+      title: "Single Belt System",
+      content:
+        "Employs a single belt design to eliminate product transfer issues, its predecessor, resulting in enhanced energy efficiency. Additionally, we&apos;ve enhanced the take-up design to decrease the frequency of belt cutting, reducing maintenance work.",
+    },
   ];
 
   const customizationOptions = [
@@ -76,9 +94,22 @@ const Theros = () => {
       </div>
 
       {/* Product array Section */}
-      <section className="py-24 lg:px-12 sm:px-6">
+      <div className="mb-24 mx-4 md:mx-8 lg:mx-12">
+        <section>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {TherosFeatureData.map((spec, index) => (
+              <TherosFeatureCard
+                key={index}
+                title={spec.title}
+                content={spec.content}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
+
+      {/* <section className="py-24 lg:px-12 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-          {/* Test margins for phone screen */}
           <div className="sm:my-4">
             <Image
               src={heaterboximage} // Replace with your image path
@@ -87,7 +118,10 @@ const Theros = () => {
               height={400}
               className="w-full h-1/2 object-fill"
             />
-            <p className="py-4 text-2xl md:text-3xl text-center font-semibold"> Heating </p>
+            <p className="py-4 text-2xl md:text-3xl text-center font-semibold">
+              {" "}
+              Heating{" "}
+            </p>
             <p className="text-xl py-6 text-justify px-4">
               Our system features modular heater boxes for easy replacements,
               efficient Infrared heating, precise temperature control, and the
@@ -135,54 +169,59 @@ const Theros = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Technical Specifications Table */}
 
-{/* Tabs Section */}
-<section className="mb-16 mt-4">
-  {/* Dropdown for small screens */}
-  <div className="block sm:hidden px-4 sm:py-8">
-    <select
-      value={activeTab}
-      onChange={(e) => setActiveTab(e.target.value)}
-      className="w-full p-2 border border-gray-300 rounded-md text-lg"
-    >
-      <option value="specs">Technical Specifications</option>
-      <option value="features">Features</option>
-      <option value="speed">Customization Options</option>
-    </select>
-  </div>
+      {/* Tabs Section */}
+      <section className="mb-16 mt-4">
+        {/* Dropdown for small screens */}
+        <div className="block sm:hidden px-4 sm:py-8">
+          <select
+            value={activeTab}
+            onChange={(e) => setActiveTab(e.target.value)}
+            className="w-full p-2 border border-gray-300 rounded-md text-lg"
+          >
+            <option value="specs">Technical Specifications</option>
+            <option value="features">Features</option>
+            <option value="speed">Customization Options</option>
+          </select>
+        </div>
 
-  {/* Tab buttons for medium and larger screens */}
-  <div className="hidden sm:flex justify-center space-x-4 overflow-x-auto">
-    <button
-      onClick={() => setActiveTab("specs")}
-      className={`text-lg md:text-2xl px-4 md:px-6 py-2 whitespace-nowrap ${
-        activeTab === "specs" ? "font-bold border-b-4 border-blue-500" : ""
-      }`}
-    >
-      Technical Specifications
-    </button>
-    <button
-      onClick={() => setActiveTab("features")}
-      className={`text-lg md:text-2xl px-4 md:px-6 py-2 whitespace-nowrap ${
-        activeTab === "features" ? "font-bold border-b-4 border-blue-500" : ""
-      }`}
-    >
-      Features
-    </button>
-    <button
-      onClick={() => setActiveTab("speed")}
-      className={`text-lg md:text-2xl px-4 md:px-6 py-2 whitespace-nowrap ${
-        activeTab === "speed" ? "font-bold border-b-4 border-blue-500" : ""
-      }`}
-    >
-      Customization Options
-    </button>
-  </div>
-</section>
-
+        {/* Tab buttons for medium and larger screens */}
+        <div className="hidden sm:flex justify-center space-x-4 overflow-x-auto">
+          <button
+            onClick={() => setActiveTab("specs")}
+            className={`text-lg md:text-2xl px-4 md:px-6 py-2 whitespace-nowrap ${
+              activeTab === "specs"
+                ? "font-bold border-b-4 border-blue-500"
+                : ""
+            }`}
+          >
+            Technical Specifications
+          </button>
+          <button
+            onClick={() => setActiveTab("features")}
+            className={`text-lg md:text-2xl px-4 md:px-6 py-2 whitespace-nowrap ${
+              activeTab === "features"
+                ? "font-bold border-b-4 border-blue-500"
+                : ""
+            }`}
+          >
+            Features
+          </button>
+          <button
+            onClick={() => setActiveTab("speed")}
+            className={`text-lg md:text-2xl px-4 md:px-6 py-2 whitespace-nowrap ${
+              activeTab === "speed"
+                ? "font-bold border-b-4 border-blue-500"
+                : ""
+            }`}
+          >
+            Customization Options
+          </button>
+        </div>
+      </section>
 
       {/* 
       // <div className="text-lg px-4">
@@ -220,6 +259,8 @@ const Theros = () => {
           //     </li>
           //   </ul>
           // </div>` */}
+
+      {/* Testing New Secion */}
 
       {/* Tab Content Section */}
       <section>
@@ -313,43 +354,43 @@ const Theros = () => {
             <h3 className="text-4xl font-bold mb-6">Customization Options</h3>
 
             {/* Customization Table */}
-            <div className="overflow-x-auto"> 
-            <table className="min-w-full border border-gray-300">
-              <thead>
-                <tr className="bg-gray-200">
-                  <th className="border border-gray-300 px-4 py-2 text-left">
-                    Number of Levels
-                  </th>
-                  <th className="border border-gray-300 px-4 py-2 text-left">
-                    Number of Zones
-                  </th>
-                  <th className="border border-gray-300 px-4 py-2 text-left">
-                    Height of Oven (m)
-                  </th>
-                  <th className="border border-gray-300 px-4 py-2 text-left">
-                    Oven Dwell Time (s)
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {customizationOptions.map((option, index) => (
-                  <tr key={index} className="hover:bg-gray-100">
-                    <td className="border border-gray-300 px-4 py-2">
-                      {option.levels}
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      {option.zones}
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      {option.height}
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      {option.dwellTime}
-                    </td>
+            <div className="overflow-x-auto">
+              <table className="min-w-full border border-gray-300">
+                <thead>
+                  <tr className="bg-gray-200">
+                    <th className="border border-gray-300 px-4 py-2 text-left">
+                      Number of Levels
+                    </th>
+                    <th className="border border-gray-300 px-4 py-2 text-left">
+                      Number of Zones
+                    </th>
+                    <th className="border border-gray-300 px-4 py-2 text-left">
+                      Height of Oven (m)
+                    </th>
+                    <th className="border border-gray-300 px-4 py-2 text-left">
+                      Oven Dwell Time (s)
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {customizationOptions.map((option, index) => (
+                    <tr key={index} className="hover:bg-gray-100">
+                      <td className="border border-gray-300 px-4 py-2">
+                        {option.levels}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {option.zones}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {option.height}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {option.dwellTime}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         )}

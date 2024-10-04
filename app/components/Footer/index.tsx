@@ -8,18 +8,19 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h4 className="font-bold text-lg">HYC Singapore Inc. Pte. Ltd.</h4>
-          <p>150 Kampong Ampat, Singapore 368324</p>
-          <p>#04-04A, KA CENTRE</p>
+          <p>150 Kampong Ampat, #04-04A </p>
+          <p>KA CENTRE</p>
+          <p>Singapore 368324</p>
         </div>
 
         <div className="mt-4 text-center space-y-2">
           <div className="flex justify-center items-center space-x-2">
             <FontAwesomeIcon icon={faPhone} className='w-4' />
-            <span>+65 9999 9999</span>
+            <span>+65 9337 7523 (Andrew) </span>
           </div>
           <div className="flex justify-center items-center space-x-2">
             <FontAwesomeIcon icon={faEnvelope} className='w-4' />
-            <span>example@gmail.com</span>
+            <span>lims@hyc.com (William)</span>
           </div>
         </div>
       </div>

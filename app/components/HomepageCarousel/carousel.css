@@ -1,0 +1,11 @@
+.text-overlay {
+    position: absolute; /* Position text over the image */
+    top: 25%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position */
+    background: black;
+    color: whitesmoke; /* Text color */
+    text-align: center; /* Center text */
+    z-index: 2; /* Ensure text is above the image */
+  }
+

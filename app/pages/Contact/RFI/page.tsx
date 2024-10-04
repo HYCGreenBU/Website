@@ -1,5 +1,6 @@
-'use client';
-import { useState, ChangeEvent, FormEvent } from 'react';
+"use client";
+import { useState, ChangeEvent, FormEvent } from "react";
+import emailjs from 'emailjs-com';
 
 export default function RFI() {
   const [formData, setFormData] = useState({
@@ -9,7 +10,6 @@ export default function RFI() {
     company: '',
     message: '',
   });
-
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,16 +21,26 @@ export default function RFI() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
-    alert('Thank you! Your request has been submitted.');
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      message: '',
+
+    emailjs.send(
+      'service_5wdr69q', // Replace with your EmailJS service ID
+      'template_u4rlm5j', // Replace with your EmailJS template ID
+      formData,
+      'nuJ-9T2BI_Rxg44P8' // Replace with your EmailJS user ID
+    )
+    .then(() => {
+      alert('Thank you! Your request has been submitted.');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: '',
+      });
+    })
+    .catch((error) => {
+      console.error('Failed to send email:', error);
+      alert('Error submitting form. Please try again.');
     });
   };
 
@@ -38,14 +48,19 @@ export default function RFI() {
     <div className="min-h-screen bg-gray-100 py-12">
       <div className="container mx-auto px-6">
         <div className="bg-white p-8 shadow-lg rounded-lg">
-          <h2 className="text-3xl font-semibold text-center mb-6">Request for Information/Quote</h2>
+          <h2 className="text-3xl font-semibold text-center mb-6">
+            Request for Information/Quote
+          </h2>
           <p className="text-lg text-gray-600 text-center mb-8">
-            Please fill out the form below, and we’ll get back to you as soon as possible.
+            Please fill out the form below, and we’ll get back to you as soon as
+            possible.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-lg font-medium text-gray-700">Name</label>
+              <label className="block text-lg font-medium text-gray-700">
+                Name
+              </label>
               <input
                 type="text"
                 name="name"
@@ -57,7 +72,9 @@ export default function RFI() {
             </div>
 
             <div>
-              <label className="block text-lg font-medium text-gray-700">Email</label>
+              <label className="block text-lg font-medium text-gray-700">
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
@@ -69,7 +86,9 @@ export default function RFI() {
             </div>
 
             <div>
-              <label className="block text-lg font-medium text-gray-700">Phone Number</label>
+              <label className="block text-lg font-medium text-gray-700">
+                Phone Number
+              </label>
               <input
                 type="tel"
                 name="phone"
@@ -81,7 +100,9 @@ export default function RFI() {
             </div>
 
             <div>
-              <label className="block text-lg font-medium text-gray-700">Company</label>
+              <label className="block text-lg font-medium text-gray-700">
+                Company
+              </label>
               <input
                 type="text"
                 name="company"
@@ -92,7 +113,9 @@ export default function RFI() {
             </div>
 
             <div>
-              <label className="block text-lg font-medium text-gray-700">Details</label>
+              <label className="block text-lg font-medium text-gray-700">
+                Details
+              </label>
               <textarea
                 name="message"
                 value={formData.message}

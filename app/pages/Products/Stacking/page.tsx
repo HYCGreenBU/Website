@@ -11,16 +11,15 @@ const Stacking = () => {
   const [activeTab, setActiveTab] = useState("specs");
 
   const technicalSpecifications = [
-    { title: "System Dimension (m)", content: "11.5 (L) x 6.5 (W) x 4.5 (H)" },
-    { title: "Temperature", content: "Max 230°C" },
-    { title: "Cooling Method", content: "Forced Convection" },
-    { title: "Conveyor Speed", content: "Max 120 ft/min" },
-    { title: "Conveyor Material", content: "SUS304 (Stainless Steel)" },
-    { title: "Output", content: "Max 180UPM (Ø230mm)" },
+    { title: "System Dimension (m)", content: "2.3 (L) x 0.5 (W) x 1.2 (H)" },
+    { title: "Maximum product per stack", content: "88" },
+    { title: "Conveyor Speed", content: "0.9m/s" },
+    { title: "Conveyor Material", content: "Polyurethane" },
+    { title: "Output", content: "120 UPM / Lane" },
     { title: "Scalable", content: "2 - 4 Lanes" },
     { title: "Customer’s Product Size", content: "< Ø230 x 150 mm H" },
     { title: "Power", content: "AC 415V 3 phase 50 Hz" },
-    { title: "Belt Width", content: "660mm" },
+    { title: "Belt Width", content: "85mm - 255mm" },
   ];
 
   return (

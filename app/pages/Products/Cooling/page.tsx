@@ -17,16 +17,16 @@ const Cooling = () => {
   const [activeTab, setActiveTab] = useState("specs");
 
   const technicalSpecifications = [
-    { title: "System Dimension (m)", content: "6.5 (L) x 2.2 (W) x 2.5 (H)" },
-    { title: "Temperature", content: "Max 230°C" },
-    { title: "Cooling Method", content: "Forced Convection" },
-    { title: "Conveyor Speed", content: "Max 120 ft/min" },
-    { title: "Conveyor Material", content: "SUS304 (Stainless Steel)" },
-    { title: "Maximum Output", content: "480UPM" },
+    { title: "System Dimension (m)", content: "6.6 (L) x 2.2 (W) x 2 (H)" },
+    { title: "Temperature", content: "<40˚C" },
+    { title: "Cooling Method", content: "Force Cooling" },
+    { title: "Conveyor Speed", content: "0.9m/s" },
+    { title: "Conveyor Material", content: "Polyethylene" },
+    { title: "Maximum Output", content: "120 UPM / Lane" },
     { title: "Scalable", content: "2 - 4 Lanes" },
     { title: "Customer’s Product Size", content: "< Ø230 x 150 mm H" },
     { title: "Power", content: "AC 415V 3 phase 50 Hz" },
-    { title: "Belt Width", content: "660mm" },
+    { title: "Belt Width", content: "85mm - 225mm" },
   ];
 
   return (

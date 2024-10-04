@@ -34,7 +34,7 @@ const ProductCard: React.FC<FeatureCardProps> = ({
       </div>
       <div className="mt-auto">
         <Link href={buttonLink} passHref>
-          <button className="lg:px-10 md:px-10 sm:px-12 py-2 bg-black text-white rounded-2xl text-lg whitespace-nowrap">
+          <button className="px-12 py-2 bg-black text-white rounded-2xl text-lg whitespace-nowrap">
             View More
           </button>
         </Link>
