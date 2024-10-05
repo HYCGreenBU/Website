@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const QualityPage = () => {
   return (
@@ -8,7 +8,7 @@ const QualityPage = () => {
         <section>
           <h2 className="text-3xl font-bold text-blue-800 mb-4">Our Mission</h2>
           <p className="text-lg">
-            Innovative, Customizable, and High-Quality Products and Service
+            Innovative, Customizable, and High-Quality Products and Services
           </p>
         </section>
 
@@ -16,7 +16,8 @@ const QualityPage = () => {
         <section>
           <h2 className="text-3xl font-bold text-blue-800 mb-4">Core Value</h2>
           <p className="text-lg">
-            Commitment to Engineering Excellence, Customer Focus, and Sustainability
+            Commitment to Engineering Excellence, Customer Focus, and
+            Sustainability
           </p>
         </section>
 
@@ -24,12 +25,13 @@ const QualityPage = () => {
         <section>
           <h2 className="text-3xl font-bold text-blue-800 mb-4">Our Vision</h2>
           <p className="text-lg">
-            To be the Leading Provider of Sustainable and Innovative Engineering Solutions
+            To be the Leading Provider of Sustainable and Innovative Engineering
+            Solutions
           </p>
         </section>
 
         {/* Quality Objective */}
-        <section>
+        {/* <section>
           <h2 className="text-3xl font-bold text-blue-800 mb-4">Quality Objective</h2>
           <ul className="list-disc list-inside space-y-2 text-lg">
             <li>Attain a customer satisfaction rate of 75%.</li>
@@ -40,11 +42,13 @@ const QualityPage = () => {
               Implement annual refresher quality awareness training for all employees, with at least 95% attendance every year.
             </li>
           </ul>
-        </section>
+        </section> */}
 
         {/* Quality Policy */}
         <section>
-          <h2 className="text-3xl font-bold text-blue-800 mb-4">Quality Policy</h2>
+          <h2 className="text-3xl font-bold text-blue-800 mb-4">
+            Quality Policy
+          </h2>
           <p className="text-lg">
             Excellent Products and Services throughout the Customer Journey.
           </p>
