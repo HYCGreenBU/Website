@@ -43,12 +43,12 @@ const Theros = () => {
     {
       title: "Scalability",
       content:
-        "Designed with scalability in mind, it allows varying numbers of zones (7, 9, 11). This flexibility more configuration of curing times to suit diverse curing time requirements, providing a highly adaptable solution for your specific needs.",
+        "Designed with scalability in mind, it allows varying numbers of zones (7, 9, 11). This flexibility allows more configuration of curing times to suit diverse curing time requirements, providing a highly adaptable solution for your specific needs.",
     },
     {
       title: "Single Belt System",
       content:
-        "Employs a single belt design to eliminate product transfer issues, its predecessor, resulting in enhanced energy efficiency. Additionally, we&apos;ve enhanced the take-up design to decrease the frequency of belt cutting, reducing maintenance work.",
+        "Employs a single belt design to eliminate product transfer issues, resulting in enhanced energy efficiency. Additionally, we have enhanced the take-up design to decrease the frequency of belt cutting, reducing maintenance work.",
     },
   ];
 

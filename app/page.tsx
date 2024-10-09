@@ -217,7 +217,7 @@ export default function Home() {
           <section className="">
             <p className="text-3xl font-semibold mt-20 mb-4">Other Resources</p>
             <p className="text-lg sm:text-2xl font-medium mb-4">
-              Addtional information on our products
+              Additional information on our products
             </p>
             <div className="flex ">
               <a href="/webpage/productBrochure.pdf" download>
@@ -236,9 +236,9 @@ export default function Home() {
               Feel free to reach out and one of our teammates will get back to
               you as soon as possible.
             </p>
-            <a>
+            <Link href="/pages/Contact/RFI" passHref>
               <button className="buttonMain">Contact us</button>
-            </a>
+            </Link>
           </section>
         </div>
       </div>

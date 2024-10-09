@@ -75,7 +75,7 @@ const GBU = () => {
           </p>
           <p className="font-montserrat font-semibold text-2xl mb-2 text-left">
             {" "}
-            GBU{" "}
+            Value Added Services{" "}
           </p>
           <p className="font-montserrat text-lg text-left">
             {" "}

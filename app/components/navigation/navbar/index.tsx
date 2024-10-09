@@ -164,17 +164,7 @@ const Navbar = () => {
                         Cooling
                       </p>
                     </Link>
-                    <Link href="/pages/Products/Stacking">
-                      <p
-                        className="block px-4 py-2 hover:bg-gray-200"
-                        onClick={() => {
-                          setIsMobileMenuOpen(false);
-                          setIsMobileDropdownOpen(null);
-                        }}
-                      >
-                        Stacking
-                      </p>
-                    </Link>
+
                     <Link href="/pages/Products/Vision">
                       <p
                         className="block px-4 py-2 hover:bg-gray-200"
@@ -186,6 +176,20 @@ const Navbar = () => {
                         Vision
                       </p>
                     </Link>
+
+                    <Link href="/pages/Products/Stacking">
+                      <p
+                        className="block px-4 py-2 hover:bg-gray-200"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsMobileDropdownOpen(null);
+                        }}
+                      >
+                        Stacking
+                      </p>
+                    </Link>
+
+                    
                     {/* <Link href="/pages/Products/Cleaning">
                         <p className="block px-4 py-2 hover:bg-gray-200">Cleaning</p>
                       </Link> */}

@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="mt-4 text-center space-y-2">
           <div className="flex justify-center items-center space-x-2">
             <FontAwesomeIcon icon={faPhone} className='w-4' />
-            <span>+65 9337 7523 (Andrew) </span>
+            <span>+65 9146 1699 (William) </span>
           </div>
           <div className="flex justify-center items-center space-x-2">
             <FontAwesomeIcon icon={faEnvelope} className='w-4' />
