@@ -24,8 +24,8 @@ const Cooling = () => {
     { title: "Conveyor Material", content: "Polyethylene" },
     { title: "Maximum Output", content: "120 UPM / Lane" },
     { title: "Scalable", content: "2 - 4 Lanes" },
-    { title: "Customer’s Product Size", content: "< Ø230 x 150 mm H" },
-    { title: "Power", content: "AC 415V 3 phase 50 Hz" },
+    { title: "Customer’s Product Size", content: "50 – 540 mm W, max 150mm H" },
+    { title: "Power", content: "480VAC 3 phase 50 Hz" },
     { title: "Belt Width", content: "85mm - 225mm" },
   ];
 

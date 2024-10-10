@@ -44,7 +44,7 @@ export default function Home() {
       description: "High-Speed stacking system, achieving up to 900UPM",
       imgAlt: "Quality Control",
       imgSrc: "/webpage/NotusStacking.webp",
-      buttonLink: "/pages/Products/Cooling",
+      buttonLink: "/pages/Products/Stacking",
     },
 
     {

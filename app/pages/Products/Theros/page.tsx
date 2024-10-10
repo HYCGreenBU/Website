@@ -29,8 +29,8 @@ const Theros = () => {
     { title: "Conveyor Material", content: "SUS304 (Stainless Steel)" },
     { title: "Output", content: "Max 180UPM (Ø230mm)" },
     { title: "Scalable", content: "7, 9 & 11 Zones" },
-    { title: "Customer’s Product Size", content: "< Ø230 x 150 mm H" },
-    { title: "Power", content: "AC 415V 3 phase 50 Hz" },
+    { title: "Customer’s Product Size", content: "50 – 540 mm W, max 150mm H" },
+    { title: "Power", content: "480VAC 3 phase 50 Hz" },
     { title: "Belt Width", content: "660mm" },
   ];
 

@@ -12,13 +12,12 @@ const Vision = () => {
 
   const technicalSpecifications = [
     { title: "System Dimension (m)", content: "2.1 (L) x 0.54 (W) x 2 (H)" },
-    
     { title: "Minimum defect size (mm)", content: "2 x 2" },
     { title: "Inspection Processing Time (ms)", content: "< 700" },
     { title: "Conveyor Speed", content: "0.9m/s" },
     { title: "Conveyor Material", content: "Polyurethane" },
     { title: "Maximum Output", content: "120 UPM / Lane" },
-    { title: "Power", content: "AC 415V 3 phase 50 Hz" },
+    { title: "Power", content: "480VAC 3 phase 50 Hz" },
     { title: "Belt Width", content: "85mm - 225mm" },
   ];
 
