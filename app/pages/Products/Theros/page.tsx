@@ -22,11 +22,11 @@ const Theros = () => {
   const [activeTab, setActiveTab] = useState("specs");
 
   const technicalSpecifications = [
-    { title: "Oven Dimension (m)", content: "11.5 (L) x 6.5 (W) x 4.5 (H)" },
+    { title: "Oven Dimension (m)", content: "10.5 (L) x 3.7 (W) x 4.2 (H)" },
     { title: "Temperature", content: "Max 230°C" },
-    { title: "Heater", content: "IR tube" },
-    { title: "Conveyor Speed", content: "Max 120 ft/min" },
-    { title: "Conveyor Material", content: "SUS304 (Stainless Steel)" },
+    { title: "Heater", content: "Customisable" },
+    { title: "Conveyor Speed", content: "30 - 120 ft/min" },
+    { title: "Conveyor Material", content: "Stainless Steel" },
     { title: "Output", content: "Max 180UPM (Ø230mm)" },
     { title: "Scalable", content: "7, 9 & 11 Zones" },
     { title: "Customer’s Product Size", content: "50 – 540 mm W, max 150mm H" },
@@ -77,7 +77,7 @@ const Theros = () => {
           <div className="w-full md:w-1/2 px-4">
             <h3 className="text-4xl font-bold mb-4">Theros</h3>
             <p className="lg:text-xl mb-4 md:text-lg sm:text-base">
-              Theros is a Spiral Infra-Red Oven that is capabale of a max
+              Theros is a Twin Spiral Infra-Red Oven that is capabale of a max
               temperature of 230°C.
             </p>
             <p className="lg:text-xl mb-4 md:text-lg sm:text-base">

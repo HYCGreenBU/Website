@@ -4,20 +4,22 @@ const QualityPage = () => {
   return (
     <div className="px-6 py-12 bg-white text-gray-900">
       <div className="max-w-6xl mx-auto space-y-12">
+
+        {/* Quality Policy */}
+        <section>
+          <h2 className="text-3xl font-bold text-blue-800 mb-4">
+            Quality Policy
+          </h2>
+          <p className="text-lg">
+            Excellent Products and Services throughout the Customer Journey.
+          </p>
+        </section>
+
         {/* Our Mission */}
         <section>
           <h2 className="text-3xl font-bold text-blue-800 mb-4">Our Mission</h2>
           <p className="text-lg">
             Innovative, Customizable, and High-Quality Products and Services
-          </p>
-        </section>
-
-        {/* Core Value */}
-        <section>
-          <h2 className="text-3xl font-bold text-blue-800 mb-4">Core Value</h2>
-          <p className="text-lg">
-            Commitment to Engineering Excellence, Customer Focus, and
-            Sustainability
           </p>
         </section>
 
@@ -30,6 +32,17 @@ const QualityPage = () => {
           </p>
         </section>
 
+
+        {/* Core Value */}
+        <section>
+          <h2 className="text-3xl font-bold text-blue-800 mb-4">Core Value</h2>
+          <p className="text-lg">
+            Commitment to Engineering Excellence, Customer Focus, and
+            Sustainability
+          </p>
+        </section>
+
+        
         {/* Quality Objective */}
         {/* <section>
           <h2 className="text-3xl font-bold text-blue-800 mb-4">Quality Objective</h2>
@@ -44,15 +57,7 @@ const QualityPage = () => {
           </ul>
         </section> */}
 
-        {/* Quality Policy */}
-        <section>
-          <h2 className="text-3xl font-bold text-blue-800 mb-4">
-            Quality Policy
-          </h2>
-          <p className="text-lg">
-            Excellent Products and Services throughout the Customer Journey.
-          </p>
-        </section>
+
       </div>
     </div>
   );
