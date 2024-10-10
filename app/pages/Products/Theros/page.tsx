@@ -53,9 +53,9 @@ const Theros = () => {
   ];
 
   const customizationOptions = [
-    { levels: 3, zones: 7, height: 5.2, dwellTime: 81 },
-    { levels: 4, zones: 9, height: 5.8, dwellTime: 105 },
-    { levels: 5, zones: 11, height: 6.5, dwellTime: 129 },
+    { levels: 3, zones: 7, height: 3.2, dwellTime: 81 },
+    { levels: 4, zones: 9, height: 3.7, dwellTime: 105 },
+    { levels: 5, zones: 11, height: 4.2, dwellTime: 129 },
   ];
 
   return (
@@ -82,7 +82,7 @@ const Theros = () => {
             </p>
             <p className="lg:text-xl mb-4 md:text-lg sm:text-base">
               This Oven has enclosed temperature-controlled zones, a compact
-              footprint of (9.5mx6m), and offers scalable options with 7, 9, or
+              footprint of (10.5m x 3.7m), and offers scalable options with 7, 9, or
               11 heating zones.
             </p>
             <p className="lg:text-xl mb-4 md:text-lg sm:text-base">
